@@ -15,7 +15,7 @@ mold_spacing = 10;			// Spacing between mold halves
 
 //Insert configuration
 insert_size = 3;		
-insert_fettle = 0.4;		// Size difference between inserts and holes
+insert_diff = 0.4;		// Size difference between inserts and holes
 insert_margin = 7;	        // Positioning from outer edge of mold
 
 //Pour hole configuration
@@ -61,11 +61,11 @@ module bottom_half() {
 
 		// insert hole 1
 		translate([-mold_width/2 + insert_margin, -mold_height/2 + insert_margin, mold_depth/2])
-			sphere(insert_size + insert_fettle, $fn = 30);
+			sphere(insert_size + insert_diff, $fn = 30);
 
 		// insert hole 2
 		translate([mold_width/2 - insert_margin, mold_height/2 - insert_margin, mold_depth/2])
-			sphere(insert_size + insert_fettle, $fn = 30);
+			sphere(insert_size + insert_diff, $fn = 30);
 	}
 
 	// insert 1
@@ -98,11 +98,11 @@ module top_half() {
 
 		// insert hole 1
 		translate(v = [mold_width/2 - insert_margin, -mold_height/2 + insert_margin, mold_depth/2])
-			sphere(insert_size + insert_fettle, $fn = 30);
+			sphere(insert_size + insert_diff, $fn = 30);
 
 		// insert hole 2
 		translate(v = [-mold_width/2 + insert_margin, mold_height/2 - insert_margin, mold_depth/2])
-			sphere(insert_size + insert_fettle, $fn = 30);
+			sphere(insert_size + insert_diff, $fn = 30);
 
 		// pour hole 
 		translate(pour_hole_translate)
