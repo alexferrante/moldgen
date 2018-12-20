@@ -1,7 +1,6 @@
 /*
 Configuration of mold parameters according to your model 
 */
-//Mold configuration 
 model_filename = "filename.stl"; 
 model_rotate = [180,66,0];
 model_translate = [0,8,9];
